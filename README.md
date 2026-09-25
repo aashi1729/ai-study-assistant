@@ -2,11 +2,13 @@
 
 An AI-powered study platform built with **Next.js** and **Google Gemini**. Paste notes or upload a PDF to generate summaries, quizzes, and flashcards, then track progress with a study timer, history, and analytics.
 
-[![Next.js](https://img.shields.io/badge/Next.js-16.3.5-black?logo=nextdotjs&logoColor=white)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19.2.8-61DAFB?logo=react&logoColor=black)](https://react.dev/)
-[![Gemini](https://img.shields.io/badge/Google_Gemini-@google/genai-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
+![Next.js](https://img.shields.io/badge/Next.js-16.3.5-black?logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-19.2.8-61DAFB?logo=react&logoColor=black)
+![Gemini](https://img.shields.io/badge/Google_Gemini-@google/genai-4285F4?logo=google&logoColor=white)
 
 ---
+
+
 
 ## 📌 Overview
 
@@ -17,6 +19,8 @@ You can summarize notes (short, medium, or detailed), generate scored multiple-c
 The header profile is **Aashi Tyagi** (Computer Science).
 
 ---
+
+
 
 ## ✨ Features
 
@@ -33,6 +37,8 @@ The header profile is **Aashi Tyagi** (Computer Science).
 - **Progress & Analytics** — total sessions, quiz average/high/low, focus minutes, current and longest streak, activity by type, earned achievements
 
 ---
+
+
 
 ## 🧠 How It Works
 
@@ -58,20 +64,26 @@ Gemini is called only from **server** routes. For PDFs, `/api/pdf` extracts text
 
 ---
 
+
+
 ## 🛠️ Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| [Next.js](https://nextjs.org/) 16 (App Router) | Pages, layouts, and API routes |
-| [React](https://react.dev/) 19 | UI and client state |
-| JavaScript / JSX | Application code (`app/` and `components/`) |
-| [Tailwind CSS](https://tailwindcss.com/) 4 | Layout and styling |
-| [Google Gemini](https://ai.google.dev/) (`gemini-3.1-flash-lite`) | Summaries, quizzes, flashcards, PDF Q&A |
-| [`@google/genai`](https://www.npmjs.com/package/@google/genai) | Official Gemini SDK on the server |
-| [`unpdf`](https://www.npmjs.com/package/unpdf) | Server-side PDF text extraction |
-| `localStorage` | Study history and analytics in the browser |
+
+| Technology                                                        | Purpose                                     |
+| ----------------------------------------------------------------- | ------------------------------------------- |
+| [Next.js](https://nextjs.org/) 16 (App Router)                    | Pages, layouts, and API routes              |
+| [React](https://react.dev/) 19                                    | UI and client state                         |
+| JavaScript / JSX                                                  | Application code (`app/` and `components/`) |
+| [Tailwind CSS](https://tailwindcss.com/) 4                        | Layout and styling                          |
+| [Google Gemini](https://ai.google.dev/) (`gemini-3.1-flash-lite`) | Summaries, quizzes, flashcards, PDF Q&A     |
+| `[@google/genai](https://www.npmjs.com/package/@google/genai)`    | Official Gemini SDK on the server           |
+| `[unpdf](https://www.npmjs.com/package/unpdf)`                    | Server-side PDF text extraction             |
+| `localStorage`                                                    | Study history and analytics in the browser  |
+
 
 ---
+
+
 
 ## 📂 Project Structure
 
@@ -108,9 +120,11 @@ ai-study-assistant/
 
 ---
 
+
+
 ## 🔑 Environment Variables
 
-Create **`.env.local`** in the project root (do not commit it):
+Create `.env.local` in the project root (do not commit it):
 
 ```env
 GEMINI_API_KEY=your_gemini_api_key
@@ -121,6 +135,8 @@ GEMINI_API_KEY=your_gemini_api_key
 - `.gitignore` includes `.env*`, so `.env.local` stays out of Git
 
 ---
+
+
 
 ## 🚀 Getting Started
 
@@ -140,26 +156,34 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-| Script | Command |
-|---|---|
-| Development | `npm run dev` |
-| Production build | `npm run build` |
-| Start production server | `npm start` |
-| Lint | `npm run lint` |
+
+| Script                  | Command         |
+| ----------------------- | --------------- |
+| Development             | `npm run dev`   |
+| Production build        | `npm run build` |
+| Start production server | `npm start`     |
+| Lint                    | `npm run lint`  |
+
 
 ---
+
+
 
 ## 📡 API Routes
 
-| Endpoint | Method | Purpose |
-|---|---|---|
-| `/api/summarize` | `POST` | JSON `{ notes, summaryLength }` → `{ summary }` |
-| `/api/quiz` | `POST` | JSON `{ notes, questionCount, difficulty }` → `{ questions }` |
-| `/api/flashcards` | `POST` | JSON `{ notes, cardCount }` → `{ flashcards }` |
-| `/api/pdf` | `POST` | `FormData` field `file` → extracted text (no Gemini) |
-| `/api/pdf/ask` | `POST` | JSON `{ question, pdfText }` → `{ answer }` |
+
+| Endpoint          | Method | Purpose                                                       |
+| ----------------- | ------ | ------------------------------------------------------------- |
+| `/api/summarize`  | `POST` | JSON `{ notes, summaryLength }` → `{ summary }`               |
+| `/api/quiz`       | `POST` | JSON `{ notes, questionCount, difficulty }` → `{ questions }` |
+| `/api/flashcards` | `POST` | JSON `{ notes, cardCount }` → `{ flashcards }`                |
+| `/api/pdf`        | `POST` | `FormData` field `file` → extracted text (no Gemini)          |
+| `/api/pdf/ask`    | `POST` | JSON `{ question, pdfText }` → `{ answer }`                   |
+
 
 ---
+
+
 
 ## 📚 Study History & Analytics
 
@@ -170,6 +194,8 @@ Saves happen when you choose **Save to Study History**, finish a quiz, complete 
 The dashboard and Progress page subscribe to the same client-side history (including a `study-history-updated` event) so stats, streak, weekly activity, and achievements update without a database.
 
 ---
+
+
 
 ## 🔐 Security & Privacy Notes
 
@@ -183,6 +209,8 @@ This is a student project, not an enterprise security audit.
 
 ---
 
+
+
 ## 🎯 Learning Outcomes
 
 - Next.js App Router pages and route handlers
@@ -194,6 +222,8 @@ This is a student project, not an enterprise security audit.
 - Layout that works on desktop, tablet, and mobile
 
 ---
+
+
 
 ## 🔮 Future Improvements
 
@@ -208,35 +238,47 @@ This is a student project, not an enterprise security audit.
 
 ---
 
+
+
 ## 📸 Screenshots
 
 Add images here when you capture them (for example under `docs/` or `public/`).
 
-<!-- Add dashboard screenshot here -->
-<!-- Suggested filename: dashboard.png -->
 
-<!-- Add summarizer screenshot here -->
-<!-- Suggested filename: summarizer.png -->
 
-<!-- Add quiz screenshot here -->
-<!-- Suggested filename: quiz.png -->
 
-<!-- Add flashcards screenshot here -->
-<!-- Suggested filename: flashcards.png -->
 
-<!-- Add PDF study screenshot here -->
-<!-- Suggested filename: pdf-study.png -->
 
-<!-- Add study timer screenshot here -->
-<!-- Suggested filename: timer.png -->
 
-<!-- Add study history screenshot here -->
-<!-- Suggested filename: history.png -->
 
-<!-- Add progress analytics screenshot here -->
-<!-- Suggested filename: progress.png -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
+
+
 
 ## 🌐 Deployment
 
@@ -252,6 +294,8 @@ Redeploy after setting the variable. Keep it a **server** secret (not `NEXT_PUBL
 
 ---
 
+
+
 ## 👩‍💻 Author
 
 **Aashi Tyagi**
@@ -261,6 +305,8 @@ Redeploy after setting the variable. Keep it a **server** secret (not `NEXT_PUBL
 - LeetCode: [leetcode.com/u/aashityagi](https://leetcode.com/u/aashityagi/)
 
 ---
+
+
 
 ## 📄 License
 
