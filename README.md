@@ -256,7 +256,7 @@ Redeploy after setting the variable. Keep it a **server** secret (not `NEXT_PUBL
 
 **Aashi Tyagi**
 
-- GitHub: [github.com/aashi1317](https://github.com/aashi1317)
+- GitHub: [github.com/aashi1729](https://github.com/aashi1729)
 - LinkedIn: [linkedin.com/in/aashi-tyagi-59891b26b](https://www.linkedin.com/in/aashi-tyagi-59891b26b)
 - LeetCode: [leetcode.com/u/aashityagi](https://leetcode.com/u/aashityagi/)
 
